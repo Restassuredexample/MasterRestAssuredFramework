@@ -16,12 +16,12 @@ package com.spotify.oauth2.requests.pojo.lombok;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
+import lombok.Data;
 import lombok.Value;
 import lombok.extern.jackson.Jacksonized;
 
 import java.util.List;
 
-@Value
 /**
  * No need of private access modifier with every field
  * 
@@ -32,7 +32,7 @@ import java.util.List;
 //@Getter @Setter
 /* Implement with Builder */
 @Jacksonized
-@Builder
+@Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Playlist {
 	@JsonProperty("collaborative")

@@ -17,6 +17,7 @@ import static com.spotify.oauth2.utils.FakerUtils.generateName;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
+import com.spotify.oauth2.requests.pojo.lombok.Playlist;
 import org.testng.annotations.Test;
 
 import com.spotify.oauth2.annotations.FrameworkAnnotation;
@@ -26,7 +27,6 @@ import com.spotify.oauth2.api.enums.CategoryType;
 import com.spotify.oauth2.api.enums.StatusCode;
 import com.spotify.oauth2.constants.FrameworkConstants;
 import com.spotify.oauth2.requests.pojo.lombok.Error;
-import com.spotify.oauth2.requests.pojo.lombok.Playlist;
 import com.spotify.oauth2.utils.DataLoader;
 import com.spotify.oauth2.utils.VerificationManager;
 
@@ -110,10 +110,10 @@ public class PlaylistTests extends _BaseTest {
 		 */
         
         
-		  Playlist playlist = new Playlist(); 
+		  Playlist playlist = new Playlist();
 		  playlist.setName(name);
 		  playlist.setDescription(description); 
-		  playlist.set_public(_public); 
+		  playlist.set_public(_public);
 		  return playlist;
 		 
     }
